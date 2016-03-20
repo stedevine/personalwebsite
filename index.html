@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stephen Devine</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <script src="./node_modules/angular/angular.js"></script>
+  <script src="./node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script src="./app.js"></script>
+  <script src="./controllers/nav.js"></script>
+  <link href="./style.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="app">
+
+  <nav class="navbar transparent navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="pull-left"><img src="./images/logo.png"></a>
+      </div>
+
+      <div class="collapse navbar-collapse" ng-controller="navController" id="site-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li ng-class="{ active: isActive('/')}"><a href="#">hello <span class="sr-only">(current)</span></a></li>
+          <li ng-class="{ active: isActive('/experience')}"><a ui-sref="experience">experience</a></li>
+          <li ng-class="{ active: isActive('/about')}"><a ui-sref="about">about</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div ui-view></div>
+</body>
+
+</html>
