@@ -52,6 +52,7 @@ a {
 }
 
 .fullscreenx {
+  background-image:url('../images/bg7.jpg');
   color: orange;
   top: 0;
   left: 0;
