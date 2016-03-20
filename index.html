@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Stephen Devine</title>
-  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
 
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -20,8 +20,8 @@
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
   <script src="./app.js"></script>
-  <script src="./controllers/nav.js"></script>
-  <link href="./style.css" rel="stylesheet">
+  <script src="./controllers/page.js"></script>
+  <link href="./css/style.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -29,9 +29,10 @@
     <![endif]-->
 </head>
 
-<body ng-app="app">
+<body ng-app="app" ng-controller="pageController">
 
-  <div class="container-full-bg" style="background-image:url('./images/bg.jpg');">
+  <!--  only apply the full screen non-scrolling background to the homepage -->
+  <div ng-class="{ fullscreen: isActive('/')}">
     <nav class="navbar" style="background: rgba(200, 54, 54, 0.5);">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -44,7 +45,7 @@
           <a href="#" class="pull-left"><img src="./images/logo.png"></a>
         </div>
 
-        <div class="collapse navbar-collapse" ng-controller="navController" id="site-navbar">
+        <div class="collapse navbar-collapse"  id="site-navbar">
           <ul class="nav navbar-nav navbar-right">
             <li ng-class="{ active: isActive('/')}"><a href="#">hello <span class="sr-only">(current)</span></a></li>
             <li ng-class="{ active: isActive('/experience')}"><a ui-sref="experience">experience</a></li>
@@ -53,8 +54,9 @@
         </div>
       </div>
     </nav>
-
-    <div ui-view></div>
+    <div class="container-fluid">
+      <div ui-view></div>
+    </div>
   </div>
 </body>
 

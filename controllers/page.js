@@ -1,4 +1,4 @@
-function navController($scope, $location) {
+function pageController($scope, $location) {
   $scope.isActive = function(viewLocation) {
     return viewLocation == $location.path();
   }
@@ -6,4 +6,4 @@ function navController($scope, $location) {
 
 angular
   .module('app')
-  .controller('navController', ['$scope', '$location', navController]);
+  .controller('pageController', ['$scope', '$location', pageController]);
