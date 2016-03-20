@@ -33,7 +33,7 @@
 <body ng-app="app" ng-controller="pageController">
 
   <!--  only apply the full screen non-scrolling background to the homepage -->
-  <div ng-class="{ fullscreen: isActive('/')}">
+  <div ng-class="{ fullscreen: isActive('/'), fullscreeno: isActive('/experience'), fullscreenx: isActive('/about')}">
     <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header">

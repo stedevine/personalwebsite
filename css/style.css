@@ -9,6 +9,14 @@ body {
   min-height: 100%;
 }
 
+a a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
 .navbar {
   background: rgba(100, 100, 120, 0.5);
 }
@@ -28,6 +36,37 @@ body {
   background-size: cover;
 }
 
+.fullscreeno {
+  background-image:url('../images/bg5.jpg');
+  top: 0;
+  left: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  max-width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.fullscreenx {
+  color: orange;
+  top: 0;
+  left: 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  max-width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+
 .round-photo {
 width:250px;
 border-radius: 50%;
@@ -43,7 +82,7 @@ width:100%;
 
 @media (min-width: 768px) {
   .mastfoot {
-    background: rgba(100, 100, 120, 0.5);
+    background: rgba(100, 100, 120, 0.750);
     position: fixed;
     bottom: 0;
     width: 100%;
