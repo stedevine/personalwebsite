@@ -1,8 +1,9 @@
 var app = angular.module('app', ['ui.router']);
 
 app.config(
-  function($stateProvider) {
-    console.log("config");
+  function($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
 
@@ -20,6 +21,4 @@ app.config(
       url: "/experience",
       templateUrl: 'views/experience.html',
     })
-
-
   });
