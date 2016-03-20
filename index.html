@@ -21,6 +21,7 @@
 
   <script src="./app.js"></script>
   <script src="./controllers/page.js"></script>
+  <script src="./controllers/photo.js"></script>
   <link href="./css/style.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -33,7 +34,7 @@
 
   <!--  only apply the full screen non-scrolling background to the homepage -->
   <div ng-class="{ fullscreen: isActive('/')}">
-    <nav class="navbar" style="background: rgba(200, 54, 54, 0.5);">
+    <nav class="navbar">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-navbar" aria-expanded="false">
@@ -45,17 +46,35 @@
           <a href="#" class="pull-left"><img src="./images/logo.png"></a>
         </div>
 
-        <div class="collapse navbar-collapse"  id="site-navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li ng-class="{ active: isActive('/')}"><a href="#">hello <span class="sr-only">(current)</span></a></li>
-            <li ng-class="{ active: isActive('/experience')}"><a ui-sref="experience">experience</a></li>
-            <li ng-class="{ active: isActive('/about')}"><a ui-sref="about">about</a></li>
+        <div class="collapse navbar-collapse" id="site-navbar">
+
+          <ul class="nav navbar-nav navbar-right btn-group" role="group">
+            <div class="btn-group" role="group">
+              <a ui-sref="hello">
+                <button ng-class="{ active: isActive('/')}" type="button" class="btn btn-danger">hello</button>
+              </a>
+            <a ui-sref="experience">
+              <div class="btn-group" role="group">
+                <button ng-class="{ active: isActive('/experience')}" type="button" class="btn btn-danger">experience</button>
+              </div>
+            </a>
+            <a ui-sref="about">
+              <div class="btn-group" role="group">
+                <button ng-class="{ active: isActive('/about')}" type="button" class="btn btn-danger">about</button>
+              </div>
+            </a>
+
           </ul>
         </div>
       </div>
     </nav>
     <div class="container-fluid">
       <div ui-view></div>
+    </div>
+  </div>
+  <div class="mastfoot">
+    <div class="h3">
+      <p>reach me : <a href="mailto:ste@stedevine.com">ste@stedevine.com</a></p>
     </div>
   </div>
 </body>
