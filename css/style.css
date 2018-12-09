@@ -241,3 +241,6 @@ http://codepen.io/jasondavis/pen/fDGdK
 .timeline-body > p + p {
   margin-top: 5px;
 }
+.timeline-body > a  {
+  color: lightblue;
+}
