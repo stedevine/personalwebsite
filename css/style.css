@@ -54,12 +54,22 @@ a {
 
 .about {
   background-image:url('../images/bg7.jpg');
-  color:orange;
+
 }
 
 .about-text {
-  color:lightblue !important;
+  color:lightgrey;
 }
+
+.about-text a {
+  color:#30D0D0;
+  text-decoration: none;
+}
+
+.about-text a:hover {
+  color:darkgrey;
+}
+
 
 .round-photo {
 width:300px;
