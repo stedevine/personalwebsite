@@ -6,7 +6,7 @@ function photoController($scope) {
     photos.push("./images/" + i+ ".jpg");
   }
   var photoIndex = 0;
-  $scope.photoImg = photos[0];
+  $scope.photoImg = photos[1];
 
   $scope.setPhoto = function() {
 
